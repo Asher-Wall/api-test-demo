@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LoginResponse",
+  "description": "POST /auth/login 的响应契约。字段一旦变更，schema 用例会先失败。",
+  "type": "object",
+  "required": ["code", "message", "data"],
+  "properties": {
+    "code": {
+      "type": "integer",
+      "description": "业务状态码，0 表示成功"
+    },
+    "message": {
+      "type": "string"
+    },
+    "data": {
+      "type": "object",
+      "required": ["token", "username"],
+      "properties": {
+        "token": {
+          "type": "string",
+          "minLength": 8
+        },
+        "username": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+# 核心运行依赖
+pytest>=8.0
+requests>=2.31
+pyyaml>=6.0
+jsonschema>=4.21
+
+# 增强能力（可选，CI 中启用）
+allure-pytest>=2.13
+pytest-rerunfailures>=14.0
+pytest-xdist>=3.5
